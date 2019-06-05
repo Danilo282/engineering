@@ -4,9 +4,21 @@ https://cloud.docker.com/u/danilos30/repository/docker/danilos30/teste-engineeri
 Pode ser realizado o clone do repositorio atraves do comando:
 git clone https://github.com/Danilo282/engineering.git
 
-Para rodar a aplicação, entrar na pasta criada apos o comando git clone e digitar o seguinte comando:
+Para rodar a aplicação, subir o serviço do docker com o comando:
+
+service docker start ou systemctl start docker
+
+entrar na pasta criada apos o comando git clone e digitar o seguinte comando:
 
 docker-compose up -d --> para rodar em background.
+
+ou rodar o script em shell:
+./dckr.sh
+
+[root@Fedora28-Dan compose]# ./dckr.sh 
+Iniciando a aplicação em Python - Hello World
+Starting compose_web_1_5ab1c56a5029 ... done
+Startup da aplicação concluido
 
 Para confirmar se a aplicação está rodando:
 
@@ -37,3 +49,6 @@ Date: Wed, 05 Jun 2019 22:03:02 GMT
 
 Resposta no log: --> comando docker logs -f <nome do container>
 172.17.0.1 - - [05/Jun/2019 19:03:02] "HEAD / HTTP/1.1" 200 -
+
+
+Parando o container
