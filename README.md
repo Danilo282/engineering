@@ -1,3 +1,5 @@
+Docker-Hub Repo:
+
 A imagem para esse teste encontra-se também no docker hub repo:
 https://cloud.docker.com/u/danilos30/repository/docker/danilos30/teste-engineering
 
@@ -8,14 +10,13 @@ Para rodar a aplicação, subir o serviço do docker com o comando:
 
 service docker start ou systemctl start docker
 
-entrar na pasta criada apos o comando git clone e digitar o seguinte comando:
+Conferir o status do serviço:
+service docker status ou systemctl status docker
 
-docker-compose up -d --> para rodar em background.
+Apos isso, entrar na pasta criada apos o comando git clone e digitar o seguinte comando:
+./dckr-start.sh --> inicia o container da aplicação --> contem o comando docker-compose up -d , para inicialização em background
 
-ou rodar o script em shell:
-./dckr.sh
-
-[root@Fedora28-Dan compose]# ./dckr.sh 
+[root@Fedora28-Dan compose]# ./dckr-start.sh 
 Iniciando a aplicação em Python - Hello World
 Starting compose_web_1_5ab1c56a5029 ... done
 Startup da aplicação concluido
@@ -45,10 +46,19 @@ HTTP/1.0 200 OK
 Content-Type: text/html; charset=utf-8
 Content-Length: 11
 Server: Werkzeug/0.15.4 Python/3.7.3
-Date: Wed, 05 Jun 2019 22:03:02 GMT
+Date: Wed, 05 Jun 2019 19:03:02 GMT
 
 Resposta no log: --> comando docker logs -f <nome do container>
 172.17.0.1 - - [05/Jun/2019 19:03:02] "HEAD / HTTP/1.1" 200 -
 
-
 Parando o container
+rodar o script abaixo que contem o comando --> docker-compose down
+
+[root@Fedora28-Dan compose]# ./dckr-stop.sh 
+Parando a aplicação em Python - Hello World
+Stopping compose_web_1_417e9545532d ... done
+Removing compose_web_1_417e9545532d ... done
+Stop da aplicação concluido
+
+Conferir se a aplicação parou:
+[root@Fedora28-Dan compose]# docker ps -a | grep compose
