@@ -2,7 +2,7 @@ A imagem para esse teste encontra-se em :
 https://cloud.docker.com/u/danilos30/repository/docker/danilos30/teste-engineering
 
 Pode ser realizado o clone do repositorio atraves do comando:
-git clone 
+git clone https://github.com/Danilo282/engineering.git
 
 
 Para rodar a aplicação, entrar na pasta criada apos o comando git clone e digitar o seguinte comando:
