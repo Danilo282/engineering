@@ -1,7 +1,7 @@
 Docker-Hub Repo:
 
 A imagem para esse teste encontra-se também no docker hub repo:
-https://cloud.docker.com/u/danilos30/repository/docker/danilos30/teste-engineering
+https://cloud.docker.com/u/danilos30/repository/docker/danilos30/devops-desafio
 
 Pode ser realizado o clone do repositorio atraves do comando:
 git clone https://github.com/Danilo282/engineering.git
