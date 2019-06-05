@@ -6,18 +6,20 @@ git clone https://github.com/Danilo282/engineering.git
 
 
 Para rodar a aplicação, entrar na pasta criada apos o comando git clone e digitar o seguinte comando:
+
 docker-compose up -d --> para rodar em background.
 
 Para confirmar se a aplicação está rodando:
 
 [root@Fedora28-Dan compose]# docker ps -a | grep compose
 ecc23de41e4d        compose_web         "python3 api.py"         14 minutes ago      Up 6 minutes            0.0.0.0:5000->5000/tcp                                     compose_web_1_5ab1c56a5029
-[root@Fedora28-Dan compose]# 
 
 Para Acompanhar os logs:
+
 docker logs -f compose_web_1_5ab1c56a5029 --> logs em tempo real
 
 Para testar a aplicação:
+
 Abrir o browser
 0.0.0.0:5000 --> porta setada no docker-compose.yml para a aplicação
 
